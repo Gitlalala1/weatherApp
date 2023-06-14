@@ -1,11 +1,13 @@
-import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View } from "react-native";
 import MainScreen from "./src/screens/main-screen";
+import WeatherState from "./src/context/weather/weather-state";
 export default function App() {
 	return (
-		<View style={styles.container}>
-			<MainScreen />
-		</View>
+		<WeatherState>
+			<View style={styles.container}>
+				<MainScreen />
+			</View>
+		</WeatherState>
 	);
 }
 
